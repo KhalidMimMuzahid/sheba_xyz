@@ -185,6 +185,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -306,6 +314,14 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -842,6 +858,30 @@
         "documentation": {}
     },
     {
+        "label": "make_html_body",
+        "importPath": "modules.bookings.utils",
+        "description": "modules.bookings.utils",
+        "isExtraImport": true,
+        "detail": "modules.bookings.utils",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailSchema",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
         "label": "create_service",
         "importPath": "modules.services.services",
         "description": "modules.services.services",
@@ -883,6 +923,39 @@
         "documentation": {}
     },
     {
+        "label": "aiosmtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiosmtplib",
+        "description": "aiosmtplib",
+        "detail": "aiosmtplib",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "BaseSettings",
         "importPath": "pydantic_settings",
         "description": "pydantic_settings",
@@ -904,14 +977,6 @@
         "description": "sqlalchemy.ext.declarative",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.declarative",
-        "documentation": {}
-    },
-    {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
         "documentation": {}
     },
     {
@@ -997,7 +1062,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")\n    # Timestamps",
+        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    customer_email = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
         "detail": "app.modules.bookings.models",
         "documentation": {}
     },
@@ -1006,7 +1071,7 @@
         "kind": 5,
         "importPath": "app.modules.bookings.routers",
         "description": "app.modules.bookings.routers",
-        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")\n@booking_router.get(\"/get-bookings\"\n, response_model=Response[list[BookingListResponse]]\n)\nasync def list_services(db: AsyncSession = Depends(get_db), page:int=1, limit:int=10):\n    result= await get_bookings(db, page, limit)",
+        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, customer_email= booking.customer_email, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")\n@booking_router.get(\"/get-bookings\"\n, response_model=Response[list[BookingListResponse]]\n)\nasync def list_services(db: AsyncSession = Depends(get_db), page:int=1, limit:int=10):\n    result= await get_bookings(db, page, limit)",
         "detail": "app.modules.bookings.routers",
         "documentation": {}
     },
@@ -1015,7 +1080,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: int",
+        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    customer_email: str",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1024,7 +1089,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: int\nclass BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService",
+        "peekOfCode": "class BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    customer_email: str\n    service_id: int\nclass BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    customer_email: str",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1033,7 +1098,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService\n    created_at: datetime\n    updated_at: datetime\n    class Config:\n        orm_mode = True",
+        "peekOfCode": "class BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    customer_email: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService\n    created_at: datetime\n    updated_at: datetime\n    class Config:",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1060,7 +1125,16 @@
         "kind": 2,
         "importPath": "app.modules.bookings.utils",
         "description": "app.modules.bookings.utils",
-        "peekOfCode": "def transform_service_data(booking):\n    \"\"\"Transforms a Booking ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": booking.id,\n        \"customer_name\": booking.customer_name,\n        \"customer_phone\": booking.customer_phone,\n        \"status\": booking.status,\n        \"service\": ServiceReferenceResponseForBookingService(**booking.service.__dict__) if booking.service else None,\n        \"created_at\": booking.created_at,\n        \"updated_at\": booking.updated_at",
+        "peekOfCode": "def transform_service_data(booking):\n    \"\"\"Transforms a Booking ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": booking.id,\n        \"customer_name\": booking.customer_name,\n        \"customer_phone\": booking.customer_phone,\n        \"customer_email\": booking.customer_email,\n        \"status\": booking.status,\n        \"service\": ServiceReferenceResponseForBookingService(**booking.service.__dict__) if booking.service else None,\n        \"created_at\": booking.created_at,",
+        "detail": "app.modules.bookings.utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_html_body",
+        "kind": 2,
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
+        "peekOfCode": "def make_html_body(customer_name: str, customer_phone:str, customer_email:str, service_id = int):\n    html_body = f\"\"\"\n    <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #e0e0e0;\">\n        <h2 style=\"text-align: center; color: #333;\">🎉 Booking Confirmed!</h2>\n        <p style=\"font-size: 16px; color: #444;\">Hi <strong>{customer_name}</strong>,</p>\n        <p style=\"font-size: 15px; color: #555;\">\n            Your service booking has been successfully confirmed. Here are the details:\n        </p>\n        <div style=\"background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin-top: 15px;\">\n            <p><strong>📞 Phone:</strong> {customer_phone}</p>",
         "detail": "app.modules.bookings.utils",
         "documentation": {}
     },
@@ -1164,11 +1238,56 @@
         "documentation": {}
     },
     {
+        "label": "EmailSchema",
+        "kind": 6,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "class EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()\n        message[\"From\"] = f\"Sheba.xyz <{SENDER_EMAIL}>\"\n        message[\"To\"] = email_data.receiver_email",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_HOST",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SMTP_HOST = \"smtp.gmail.com\"\nSMTP_PORT = 465\nSENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = Config.SENDER_PASSWORD \nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SMTP_PORT = 465\nSENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = Config.SENDER_PASSWORD \nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SENDER_EMAIL",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = Config.SENDER_PASSWORD \nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SENDER_PASSWORD",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SENDER_PASSWORD = Config.SENDER_PASSWORD \nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()\n        message[\"From\"] = f\"Sheba.xyz <{SENDER_EMAIL}>\"",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
         "label": "Settings",
         "kind": 6,
         "importPath": "app.config",
         "description": "app.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME:str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME:str\n    SENDER_PASSWORD:str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
         "detail": "app.config",
         "documentation": {}
     },

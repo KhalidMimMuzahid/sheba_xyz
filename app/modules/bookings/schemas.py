@@ -13,12 +13,14 @@ class StatusTypeEnum(str, Enum):
 class BookingCreateRequest(BaseModel):
     customer_name : str
     customer_phone: str
+    customer_email: str
     service_id: int
 
 class BookingCreateResponse(BaseModel):
     id: int
     customer_name : str
     customer_phone: str
+    customer_email: str
     status: StatusTypeEnum
     service : ServiceReferenceResponseForBookingService
     created_at: datetime

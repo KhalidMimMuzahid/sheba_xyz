@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASS: str
     DB_NAME:str
+    SENDER_PASSWORD:str
     JWT_SECRET: str
     JWT_ALGORITHM: str
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
