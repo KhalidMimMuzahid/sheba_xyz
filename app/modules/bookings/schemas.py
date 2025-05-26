@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from enum import Enum
-from services.schemas import ServiceReferenceResponseForBookingService
+from modules.services.schemas import ServiceReferenceResponseForBookingService
 
 class StatusTypeEnum(str, Enum):
     pending = "pending" #Booking request has been made but not yet confirmed.
@@ -12,7 +12,7 @@ class StatusTypeEnum(str, Enum):
 class BookingCreateRequest(BaseModel):
     customer_name : str
     customer_phone: str
-    service_id: str
+    service_id: int
 
 class BookingCreateResponse(BaseModel):
     id: int

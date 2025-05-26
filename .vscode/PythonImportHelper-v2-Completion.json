@@ -64,6 +64,22 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -465,6 +481,14 @@
         "documentation": {}
     },
     {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "database",
         "description": "database",
@@ -514,11 +538,11 @@
         "documentation": {}
     },
     {
-        "label": "ServiceReferenceResponseForBookingService",
-        "importPath": "services.schemas",
-        "description": "services.schemas",
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
-        "detail": "services.schemas",
+        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
@@ -570,91 +594,11 @@
         "documentation": {}
     },
     {
-        "label": "select",
-        "importPath": "sqlalchemy.future",
-        "description": "sqlalchemy.future",
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
         "isExtraImport": true,
-        "detail": "sqlalchemy.future",
-        "documentation": {}
-    },
-    {
-        "label": "select",
-        "importPath": "sqlalchemy.future",
-        "description": "sqlalchemy.future",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.future",
-        "documentation": {}
-    },
-    {
-        "label": "Service",
-        "importPath": "modules.services.models",
-        "description": "modules.services.models",
-        "isExtraImport": true,
-        "detail": "modules.services.models",
-        "documentation": {}
-    },
-    {
-        "label": "Service",
-        "importPath": "modules.services.models",
-        "description": "modules.services.models",
-        "isExtraImport": true,
-        "detail": "modules.services.models",
-        "documentation": {}
-    },
-    {
-        "label": "Booking",
-        "importPath": "modules.bookings.models",
-        "description": "modules.bookings.models",
-        "isExtraImport": true,
-        "detail": "modules.bookings.models",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceReferenceResponseForBookingService",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceCreateRequest",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceCreateResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceListResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "create_service",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
-        "isExtraImport": true,
-        "detail": "modules.services.services",
-        "documentation": {}
-    },
-    {
-        "label": "get_services",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
-        "isExtraImport": true,
-        "detail": "modules.services.services",
+        "detail": "responses.models",
         "documentation": {}
     },
     {
@@ -698,6 +642,134 @@
         "documentation": {}
     },
     {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "booking_service",
+        "importPath": "modules.bookings.services",
+        "description": "modules.bookings.services",
+        "isExtraImport": true,
+        "detail": "modules.bookings.services",
+        "documentation": {}
+    },
+    {
+        "label": "BookingCreateRequest",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BookingCreateResponse",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateRequest",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateResponse",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceListResponse",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "modules.services.models",
+        "description": "modules.services.models",
+        "isExtraImport": true,
+        "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "modules.services.models",
+        "description": "modules.services.models",
+        "isExtraImport": true,
+        "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "importPath": "modules.bookings.models",
+        "description": "modules.bookings.models",
+        "isExtraImport": true,
+        "detail": "modules.bookings.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_service",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
+        "label": "get_services",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
         "label": "query_builder",
         "importPath": "utils.query_builder",
         "description": "utils.query_builder",
@@ -711,6 +783,14 @@
         "description": "modules.services.routers",
         "isExtraImport": true,
         "detail": "modules.services.routers",
+        "documentation": {}
+    },
+    {
+        "label": "booking_router",
+        "importPath": "modules.bookings.routers",
+        "description": "modules.bookings.routers",
+        "isExtraImport": true,
+        "detail": "modules.bookings.routers",
         "documentation": {}
     },
     {
@@ -828,7 +908,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class StatusTypeEnum(enum.Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)",
+        "peekOfCode": "class StatusTypeEnum(enum.Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)",
         "detail": "app.modules.bookings.models",
         "documentation": {}
     },
@@ -837,8 +917,17 @@
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
+        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
         "detail": "app.modules.bookings.models",
+        "documentation": {}
+    },
+    {
+        "label": "booking_router",
+        "kind": 5,
+        "importPath": "app.modules.bookings.routers",
+        "description": "app.modules.bookings.routers",
+        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")",
+        "detail": "app.modules.bookings.routers",
         "documentation": {}
     },
     {
@@ -846,7 +935,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: str",
+        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: int",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -855,7 +944,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: str\nclass BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService",
+        "peekOfCode": "class BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: int\nclass BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -972,7 +1061,7 @@
         "kind": 5,
         "importPath": "app.routes.router",
         "description": "app.routes.router",
-        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(service_router, prefix=\"/services\", tags=[\"Services\"])",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(service_router, prefix=\"/services\", tags=[\"Services\"]) \nrouter.include_router(booking_router, prefix=\"/booking\", tags=[\"Bookings\"])",
         "detail": "app.routes.router",
         "documentation": {}
     },

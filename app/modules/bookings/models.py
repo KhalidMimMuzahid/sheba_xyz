@@ -16,7 +16,7 @@ class StatusTypeEnum(enum.Enum):
 class Booking(Base):
     __tablename__ = "bookings"
     id = Column(Integer, primary_key=True, index=True)
-    customer_name = Column(String,  unique=True, index=False)
+    customer_name = Column(String,  unique=False, index=False)
     customer_phone = Column(String,  unique=False, index=False)
     service_id= Column(Integer, ForeignKey('services.id'), nullable=False)
     status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)

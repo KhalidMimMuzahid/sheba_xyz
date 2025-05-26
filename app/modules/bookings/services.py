@@ -11,11 +11,13 @@ from modules.services.schemas import ServiceReferenceResponseForBookingService
 
 async def booking_service(db: AsyncSession, customer_name: str, customer_phone:str ,service_id = int):
      # checking for existence service with the provided service_id
+    
+    print("sid: ", service_id, "\n")
     service_result = await db.execute(select(Service).where(Service.id == service_id))
     service = service_result.scalar_one_or_none()
     if not service:
      raise CustomError(message= "No service found with this id", status_code=404, resolution="please provide valid service_id")
- 
+    print("\nxxxxxx")
      #  making an instance of the booking object that inherits from Booking Class (Models class)
     new_booking = Booking(customer_name=customer_name, customer_phone=customer_phone, service_id= service.id)
     db.add(new_booking)
