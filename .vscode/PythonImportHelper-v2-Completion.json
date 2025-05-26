@@ -105,6 +105,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -324,6 +332,42 @@
         "description": "app.modules.services.models",
         "peekOfCode": "class Service(Base):\n    __tablename__ = \"services\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    category = Column(String,  unique=False, index=False)\n    description = Column(String,  unique=False, index=False)\n    price = Column(Integer,  unique=False, index=False)\n    # Reverse relationship\n    bookings = relationship(\"Booking\", back_populates=\"service\", cascade=\"all, delete\")",
         "detail": "app.modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "peekOfCode": "class ServiceCreateRequest(BaseModel):\n    name : str\n    category : str\n    description : str\n    price : int\nclass ServiceCreateResponse(BaseModel):\n    id: int\n    name : str\n    category : str\n    description : str",
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "peekOfCode": "class ServiceCreateResponse(BaseModel):\n    id: int\n    name : str\n    category : str\n    description : str\n    price : int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass ServiceListResponse(ServiceCreateResponse):",
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceListResponse",
+        "kind": 6,
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "peekOfCode": "class ServiceListResponse(ServiceCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ServiceReferenceResponseForBookingService(BaseModel):\n    id: int\n    name : str\n    category : str\n    # description : str\n    # price : int\n    class Config:",
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "kind": 6,
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "peekOfCode": "class ServiceReferenceResponseForBookingService(BaseModel):\n    id: int\n    name : str\n    category : str\n    # description : str\n    # price : int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
