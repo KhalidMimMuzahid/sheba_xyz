@@ -978,6 +978,14 @@
         "documentation": {}
     },
     {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "modules.services.models",
         "description": "modules.services.models",
@@ -1122,7 +1130,23 @@
         "documentation": {}
     },
     {
+        "label": "UserLogInResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
         "label": "create_user",
+        "importPath": "modules.users.services",
+        "description": "modules.users.services",
+        "isExtraImport": true,
+        "detail": "modules.users.services",
+        "documentation": {}
+    },
+    {
+        "label": "login_user_service",
         "importPath": "modules.users.services",
         "description": "modules.users.services",
         "isExtraImport": true,
@@ -1143,6 +1167,30 @@
         "description": "utils.manage_auth",
         "isExtraImport": true,
         "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_dict",
+        "importPath": "utils.model_to_dict",
+        "description": "utils.model_to_dict",
+        "isExtraImport": true,
+        "detail": "utils.model_to_dict",
         "documentation": {}
     },
     {
@@ -1186,6 +1234,39 @@
         "documentation": {}
     },
     {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -1209,22 +1290,6 @@
         "description": "email.message",
         "isExtraImport": true,
         "detail": "email.message",
-        "documentation": {}
-    },
-    {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
         "documentation": {}
     },
     {
@@ -1496,7 +1561,7 @@
         "kind": 5,
         "importPath": "app.modules.users.routers",
         "description": "app.modules.users.routers",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/register-user\", response_model=Response[UserCreateResponse])\nasync def register_user_(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, name=user.name, password=user.password)\n    return create_response(result=result, pydantic_model=UserCreateResponse, message=\"User has registered successfully\")",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/register-user\", response_model=Response[UserCreateResponse])\nasync def register_user_(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, name=user.name, password=user.password)\n    return create_response(result=result, pydantic_model=UserCreateResponse, message=\"User has registered successfully\")\n@user_router.get(\"/login\", response_model=Response[UserLogInResponse]\n)\nasync def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)):\n    result= await login_user_service(db, email, password)\n    return create_response(result=result, pydantic_model=UserLogInResponse, message=\"User has logged in successfully\")",
         "detail": "app.modules.users.routers",
         "documentation": {}
     },
@@ -1532,7 +1597,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1595,7 +1660,25 @@
         "kind": 2,
         "importPath": "app.utils.manage_auth",
         "description": "app.utils.manage_auth",
-        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=Config.JWT_SECRET, algorithm= Config.JWT_ALGORITHM\n    )",
         "detail": "app.utils.manage_auth",
         "documentation": {}
     },
@@ -1604,7 +1687,7 @@
         "kind": 5,
         "importPath": "app.utils.manage_auth",
         "description": "app.utils.manage_auth",
-        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):",
         "detail": "app.utils.manage_auth",
         "documentation": {}
     },
@@ -1613,8 +1696,17 @@
         "kind": 5,
         "importPath": "app.utils.manage_auth",
         "description": "app.utils.manage_auth",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}",
         "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_dict",
+        "kind": 2,
+        "importPath": "app.utils.model_to_dict",
+        "description": "app.utils.model_to_dict",
+        "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
+        "detail": "app.utils.model_to_dict",
         "documentation": {}
     },
     {

@@ -30,3 +30,4 @@ def make_html_body(name: str, email:str,  password:str, role: str):
         </p>
     </div>
     """
+    return html_body

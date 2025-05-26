@@ -27,6 +27,7 @@ class UserLogInResponse(BaseModel):
     email :str
     role : UserRoleEnum
     name :str
+    access_token:str
     class Config:
         orm_mode = True
         extra = "ignore"
