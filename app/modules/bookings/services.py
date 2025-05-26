@@ -43,3 +43,22 @@ async def get_bookings(db: AsyncSession, page:int, limit:int):
         relationships=[Booking.service],  #  Joined load applied
         transform_fn=transform_service_data  #  Transform function applied
     )
+
+
+async def check_booking_status_service(db: AsyncSession, booking_id = int):
+    booking_result = await db.execute(select(Booking).where(Booking.id == booking_id).options(joinedload(Booking.service)))
+    booking = booking_result.scalar_one_or_none()
+    if not booking:
+     raise CustomError(message= "No booking found with this id", status_code=404, resolution="please provide valid booking_id")
+     #  making an instance of the booking object that inherits from Booking Class (Models class)
+
+
+    return {
+          "id" : booking.id,
+          "customer_name" :booking.customer_name,
+          "customer_phone" : booking.customer_phone,
+          "status": booking.status,
+          "service":  ServiceReferenceResponseForBookingService(**booking.service.__dict__),
+          "created_at" : booking.created_at,
+          "updated_at" : booking.updated_at
+    }

@@ -31,3 +31,9 @@ class BookingCreateResponse(BaseModel):
 class BookingListResponse(BookingCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass
+
+class checkBookingStatusResponse(BookingCreateResponse):
+    # extra_field: str  # Add extra fields if needed
+    pass
+
+
