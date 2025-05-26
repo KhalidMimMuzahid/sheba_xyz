@@ -6,7 +6,7 @@ from database import Base
 class Service(Base):
     __tablename__ = "services"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String,  unique=False, index=False)
+    name = Column(String,  unique=True, index=False)
     category = Column(String,  unique=False, index=False)
     description = Column(String,  unique=False, index=False)
     price = Column(Integer,  unique=False, index=False)
@@ -14,7 +14,7 @@ class Service(Base):
 
     
     # Reverse relationship
-    bookings = relationship("Booking", back_populates="service", cascade="all, delete")
+    # bookings = relationship("Booking", back_populates="service", cascade="all, delete")
 
 
 

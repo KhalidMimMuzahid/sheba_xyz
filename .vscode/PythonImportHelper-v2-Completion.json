@@ -554,7 +554,7 @@
         "kind": 6,
         "importPath": "app.modules.services.models",
         "description": "app.modules.services.models",
-        "peekOfCode": "class Service(Base):\n    __tablename__ = \"services\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    category = Column(String,  unique=False, index=False)\n    description = Column(String,  unique=False, index=False)\n    price = Column(Integer,  unique=False, index=False)\n    # Reverse relationship\n    bookings = relationship(\"Booking\", back_populates=\"service\", cascade=\"all, delete\")",
+        "peekOfCode": "class Service(Base):\n    __tablename__ = \"services\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=True, index=False)\n    category = Column(String,  unique=False, index=False)\n    description = Column(String,  unique=False, index=False)\n    price = Column(Integer,  unique=False, index=False)\n    # Reverse relationship\n    # bookings = relationship(\"Booking\", back_populates=\"service\", cascade=\"all, delete\")",
         "detail": "app.modules.services.models",
         "documentation": {}
     },
@@ -707,7 +707,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }
