@@ -137,6 +137,70 @@
         "documentation": {}
     },
     {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "BaseSettings",
         "importPath": "pydantic_settings",
         "description": "pydantic_settings",
@@ -177,22 +241,6 @@
         "documentation": {}
     },
     {
-        "label": "sessionmaker",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "declarative_base",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
         "label": "Config",
         "importPath": "config",
         "description": "config",
@@ -214,14 +262,6 @@
         "description": "routes.router",
         "isExtraImport": true,
         "detail": "routes.router",
-        "documentation": {}
-    },
-    {
-        "label": "init_db",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
         "documentation": {}
     },
     {
@@ -275,6 +315,15 @@
         "description": "app.exceptions.models",
         "peekOfCode": "T = TypeVar(\"T\")\nclass AIPolicingException(Exception):\n    \"\"\"This is the base class for all AIPolicing errors\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        self.status_code = status_code\n        self.message = message\n        self.resolution = resolution\n        super().__init__(message)\nclass CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"",
         "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "kind": 6,
+        "importPath": "app.modules.services.models",
+        "description": "app.modules.services.models",
+        "peekOfCode": "class Service(Base):\n    __tablename__ = \"services\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    category = Column(String,  unique=False, index=False)\n    description = Column(String,  unique=False, index=False)\n    price = Column(Integer,  unique=False, index=False)\n    # Reverse relationship\n    bookings = relationship(\"Booking\", back_populates=\"service\", cascade=\"all, delete\")",
+        "detail": "app.modules.services.models",
         "documentation": {}
     },
     {
