@@ -14,7 +14,7 @@ class Service(Base):
 
     
     # Reverse relationship
-    # bookings = relationship("Booking", back_populates="service", cascade="all, delete")
+    bookings = relationship("Booking", back_populates="service", cascade="all, delete")
 
 
 
