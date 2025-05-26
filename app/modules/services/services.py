@@ -54,3 +54,32 @@ async def delete_service(db: AsyncSession, id: str):
     await db.delete(service)
     await db.commit()
     return None
+
+async def update_service(
+    db: AsyncSession,
+    service_id: int,
+    name: str=None,
+    category: str=None,
+    description:str=None,
+    price: int=None
+):
+    # Fetch the vehicle from the database
+    service_result = await db.execute(select(Service).where(Service.id == service_id))
+    service = service_result.scalar_one_or_none()
+
+    if not service:
+        raise CustomError(message="Service not found", status_code=404, resolution="Provide a valid service_id")
+
+    # Update vehicle data
+    if name:
+        service.name = name
+    if category:
+        service.category = category
+    if description:
+        service.description = description
+    if price:
+        service.price = price
+
+    await db.commit()
+    await db.refresh(service)
+    return service

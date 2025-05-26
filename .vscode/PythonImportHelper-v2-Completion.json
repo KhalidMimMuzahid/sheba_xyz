@@ -802,6 +802,14 @@
         "documentation": {}
     },
     {
+        "label": "ServiceUpdateRequest",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
         "label": "select",
         "importPath": "sqlalchemy.future",
         "description": "sqlalchemy.future",
@@ -923,6 +931,14 @@
     },
     {
         "label": "delete_service",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
+        "label": "update_service",
         "importPath": "modules.services.services",
         "description": "modules.services.services",
         "isExtraImport": true,
@@ -1220,7 +1236,16 @@
         "kind": 6,
         "importPath": "app.modules.services.schemas",
         "description": "app.modules.services.schemas",
-        "peekOfCode": "class ServiceReferenceResponseForBookingService(BaseModel):\n    id: int\n    name : str\n    category : str\n    # description : str\n    # price : int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "peekOfCode": "class ServiceReferenceResponseForBookingService(BaseModel):\n    id: int\n    name : str\n    category : str\n    # description : str\n    # price : int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass ServiceUpdateRequest(ServiceCreateResponse):",
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceUpdateRequest",
+        "kind": 6,
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "peekOfCode": "class ServiceUpdateRequest(ServiceCreateResponse):\n    pass",
         "detail": "app.modules.services.schemas",
         "documentation": {}
     },

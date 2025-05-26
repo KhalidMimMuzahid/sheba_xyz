@@ -29,3 +29,5 @@ class ServiceReferenceResponseForBookingService(BaseModel):
     class Config:
         orm_mode = True
         extra = "ignore"
+class ServiceUpdateRequest(ServiceCreateResponse):
+    pass
