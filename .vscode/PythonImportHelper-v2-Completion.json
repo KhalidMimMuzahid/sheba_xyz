@@ -409,6 +409,38 @@
         "documentation": {}
     },
     {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "desc",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -538,6 +570,14 @@
     },
     {
         "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -1247,6 +1287,24 @@
         "description": "app.modules.services.schemas",
         "peekOfCode": "class ServiceUpdateRequest(ServiceCreateResponse):\n    pass",
         "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "kind": 6,
+        "importPath": "app.modules.users.models",
+        "description": "app.modules.users.models",
+        "peekOfCode": "class UserRoleEnum(enum.Enum):\n    admin = \"admin\"\n    # user =  \"user\"\nclass User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    role = Column(Enum(UserRoleEnum), nullable=False, default= \"admin\")\n    name = Column(String,  unique=False, index=True)\n    password = Column(String, nullable=False)",
+        "detail": "app.modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.modules.users.models",
+        "description": "app.modules.users.models",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    role = Column(Enum(UserRoleEnum), nullable=False, default= \"admin\")\n    name = Column(String,  unique=False, index=True)\n    password = Column(String, nullable=False)",
+        "detail": "app.modules.users.models",
         "documentation": {}
     },
     {
