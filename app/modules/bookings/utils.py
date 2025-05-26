@@ -37,8 +37,8 @@ def make_html_body(customer_name: str, customer_phone:str, customer_email:str, s
 
 
         <hr style="margin-top: 30px; border: none; border-top: 1px solid #eee;" />
-        <p style="font-size: 12px; color: #aaa; text-align: center;">
-            &copy; 2025 Your Company. All rights reserved.
+       <p style="font-size: 12px; color: #999; text-align: center;">
+            &copy; 2025 Sheba.xyz. All rights reserved.
         </p>
     </div>
     """

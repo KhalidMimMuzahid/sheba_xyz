@@ -80,6 +80,22 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -113,6 +129,22 @@
     },
     {
         "label": "ExceptionContent",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
         "importPath": "exceptions.models",
         "description": "exceptions.models",
         "isExtraImport": true,
@@ -593,6 +625,14 @@
         "documentation": {}
     },
     {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "database",
         "description": "database",
@@ -682,6 +722,22 @@
         "documentation": {}
     },
     {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
         "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
@@ -714,6 +770,14 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "MetaData",
         "importPath": "responses.models",
         "description": "responses.models",
@@ -727,6 +791,14 @@
         "description": "responses.models",
         "isExtraImport": true,
         "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
         "documentation": {}
     },
     {
@@ -803,6 +875,22 @@
     },
     {
         "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -970,6 +1058,22 @@
         "documentation": {}
     },
     {
+        "label": "send_email",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailSchema",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
         "label": "create_service",
         "importPath": "modules.services.services",
         "description": "modules.services.services",
@@ -1002,6 +1106,54 @@
         "documentation": {}
     },
     {
+        "label": "UserCreateRequest",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "importPath": "modules.users.services",
+        "description": "modules.users.services",
+        "isExtraImport": true,
+        "detail": "modules.users.services",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "modules.users.models",
+        "description": "modules.users.models",
+        "isExtraImport": true,
+        "detail": "modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "make_html_body",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "isExtraImport": true,
+        "detail": "modules.users.utils",
+        "documentation": {}
+    },
+    {
         "label": "service_router",
         "importPath": "modules.services.routers",
         "description": "modules.services.routers",
@@ -1015,6 +1167,22 @@
         "description": "modules.bookings.routers",
         "isExtraImport": true,
         "detail": "modules.bookings.routers",
+        "documentation": {}
+    },
+    {
+        "label": "user_router",
+        "importPath": "modules.users.routers",
+        "description": "modules.users.routers",
+        "isExtraImport": true,
+        "detail": "modules.users.routers",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
         "documentation": {}
     },
     {
@@ -1324,6 +1492,15 @@
         "documentation": {}
     },
     {
+        "label": "user_router",
+        "kind": 5,
+        "importPath": "app.modules.users.routers",
+        "description": "app.modules.users.routers",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/register-user\", response_model=Response[UserCreateResponse])\nasync def register_user_(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, name=user.name, password=user.password)\n    return create_response(result=result, pydantic_model=UserCreateResponse, message=\"User has registered successfully\")",
+        "detail": "app.modules.users.routers",
+        "documentation": {}
+    },
+    {
         "label": "UserRoleEnum",
         "kind": 6,
         "importPath": "app.modules.users.schemas",
@@ -1346,16 +1523,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    # password :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")\nclass UserLoggedInStatusResponse(BaseModel):",
-        "detail": "app.modules.users.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "UserLoggedInStatusResponse",
-        "kind": 6,
-        "importPath": "app.modules.users.schemas",
-        "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserLoggedInStatusResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass UserLogInResponse(BaseModel):\n    id: int",
+        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    # password :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")\nclass UserLogInResponse(BaseModel):",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1366,6 +1534,15 @@
         "description": "app.modules.users.schemas",
         "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "make_html_body",
+        "kind": 2,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "def make_html_body(name: str, email:str,  password:str, role: str):\n    html_body = f\"\"\"\n    <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f4f4f4; border-radius: 8px; border: 1px solid #ddd;\">\n        <h2 style=\"text-align: center; color: #2d2d2d;\">👮 Welcome to Sheba.xyz</h2>\n        <p style=\"font-size: 16px; color: #333;\">\n            Hello <strong>{name}</strong>,\n        </p>\n        <p style=\"font-size: 15px; color: #444;\">\n            Your account has been successfully registered in the <strong>AI Policing System</strong>.\n        </p>",
+        "detail": "app.modules.users.utils",
         "documentation": {}
     },
     {
@@ -1409,8 +1586,35 @@
         "kind": 5,
         "importPath": "app.routes.router",
         "description": "app.routes.router",
-        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(service_router, prefix=\"/services\", tags=[\"Services\"]) \nrouter.include_router(booking_router, prefix=\"/booking\", tags=[\"Bookings\"])",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"]) \nrouter.include_router(service_router, prefix=\"/services\", tags=[\"Services\"]) \nrouter.include_router(booking_router, prefix=\"/bookings\", tags=[\"Bookings\"])",
         "detail": "app.routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "passwd_context",
+        "kind": 5,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRY",
+        "kind": 5,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {

@@ -28,7 +28,7 @@ async def booking_service(db: AsyncSession, customer_name: str, customer_phone:s
         subject="Your Service has booked successfully",
         html_body = make_html_body(customer_name, customer_phone, customer_email, service_id)
     )) 
-    print("email has sent successfully" if is_sent else "email has not sent somehow")
+    # print("email has sent successfully" if is_sent else "email has not sent somehow")
 
     return {
           "id" : new_booking.id,
