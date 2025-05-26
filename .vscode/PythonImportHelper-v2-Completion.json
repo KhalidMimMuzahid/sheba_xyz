@@ -465,6 +465,14 @@
         "documentation": {}
     },
     {
+        "label": "get_services",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "responses.models",
         "description": "responses.models",
@@ -514,6 +522,14 @@
     },
     {
         "label": "ServiceCreateResponse",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceListResponse",
         "importPath": "modules.services.schemas",
         "description": "modules.services.schemas",
         "isExtraImport": true,
@@ -676,7 +692,7 @@
         "kind": 5,
         "importPath": "app.modules.services.routers",
         "description": "app.modules.services.routers",
-        "peekOfCode": "service_router = APIRouter()\n@service_router.post(\"/add-service\", response_model=  Response[ServiceCreateResponse]\n)\nasync def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_service(db=db, name= service.name, category= service.category, description= service.description, price=service.price )\n    return create_response(result=result, pydantic_model=ServiceCreateResponse, message=\"Service has added successfully\")",
+        "peekOfCode": "service_router = APIRouter()\n@service_router.post(\"/add-service\", response_model=  Response[ServiceCreateResponse]\n)\nasync def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_service(db=db, name= service.name, category= service.category, description= service.description, price=service.price )\n    return create_response(result=result, pydantic_model=ServiceCreateResponse, message=\"Service has added successfully\")\n@service_router.get(\"/get-services\"\n# , response_model=Response[list[ServiceListResponse]]\n)\nasync def list_services(page:int=1, limit:int=10, category:str=None, db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.services.routers",
         "documentation": {}
     },
