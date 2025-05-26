@@ -137,6 +137,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "ValidationError",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -465,6 +473,22 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "importPath": "services.schemas",
+        "description": "services.schemas",
+        "isExtraImport": true,
+        "detail": "services.schemas",
+        "documentation": {}
+    },
+    {
         "label": "AsyncSession",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
@@ -733,6 +757,42 @@
         "description": "app.modules.bookings.models",
         "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(String,  unique=False, index=False)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
         "detail": "app.modules.bookings.models",
+        "documentation": {}
+    },
+    {
+        "label": "StatusTypeEnum",
+        "kind": 6,
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
+        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: str",
+        "detail": "app.modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BookingCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
+        "peekOfCode": "class BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    service_id: str\nclass BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService",
+        "detail": "app.modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BookingCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
+        "peekOfCode": "class BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass BookingListResponse(BookingCreateRequest):",
+        "detail": "app.modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BookingListResponse",
+        "kind": 6,
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
+        "peekOfCode": "class BookingListResponse(BookingCreateRequest):\n    # extra_field: str  # Add extra fields if needed\n    pass",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
