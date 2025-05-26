@@ -48,6 +48,22 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -201,11 +217,27 @@
         "documentation": {}
     },
     {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "init_db",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
         "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
@@ -233,11 +265,59 @@
         "documentation": {}
     },
     {
+        "label": "create_service",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateRequest",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateResponse",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "modules.services.models",
         "description": "modules.services.models",
         "isExtraImport": true,
         "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "service_router",
+        "importPath": "modules.services.routers",
+        "description": "modules.services.routers",
+        "isExtraImport": true,
+        "detail": "modules.services.routers",
         "documentation": {}
     },
     {
@@ -351,6 +431,15 @@
         "documentation": {}
     },
     {
+        "label": "service_router",
+        "kind": 5,
+        "importPath": "app.modules.services.routers",
+        "description": "app.modules.services.routers",
+        "peekOfCode": "service_router = APIRouter()\n@service_router.post(\"/add-service\", response_model=  Response[ServiceCreateResponse]\n)\nasync def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_service(db=db, name= service.name, category= service.category, description= service.description, price=service.price )\n    return create_response(result=result, pydantic_model=ServiceCreateResponse, message=\"Service has added successfully\")",
+        "detail": "app.modules.services.routers",
+        "documentation": {}
+    },
+    {
         "label": "ServiceCreateRequest",
         "kind": 6,
         "importPath": "app.modules.services.schemas",
@@ -391,7 +480,7 @@
         "kind": 5,
         "importPath": "app.routes.router",
         "description": "app.routes.router",
-        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\n# router.include_router(moodule_router, prefix=\"/module\", tags=[\"Module\"])",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(service_router, prefix=\"/services\", tags=[\"Services\"])",
         "detail": "app.routes.router",
         "documentation": {}
     },

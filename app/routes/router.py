@@ -1,8 +1,9 @@
 from fastapi import APIRouter
-# from modules.module.router import module_router
-# middlewares
+from modules.services.routers import service_router
+
+
 # creating a router 
 router = APIRouter()
 
 # calling a router depends on prefix
-# router.include_router(moodule_router, prefix="/module", tags=["Module"]) 
+router.include_router(service_router, prefix="/services", tags=["Services"]) 
