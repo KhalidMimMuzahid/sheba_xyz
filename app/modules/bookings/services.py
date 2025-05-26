@@ -72,3 +72,4 @@ async def check_booking_status_service(db: AsyncSession, booking_id = int):
           "created_at" : booking.created_at,
           "updated_at" : booking.updated_at
     }
+

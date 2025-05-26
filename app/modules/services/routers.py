@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from database import get_db 
-from modules.services.services import create_service, get_services
+from modules.services.services import create_service, get_services, delete_service
 from responses.models import Response
 from responses.handler import create_response
 from modules.services.schemas import ServiceCreateRequest, ServiceCreateResponse, ServiceListResponse
@@ -23,4 +23,10 @@ async def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(
 async def list_services(page:int=1, limit:int=10, category:str=None, db: AsyncSession = Depends(get_db)):
     result= await get_services(db, page, limit, category)
     return create_response(result=result["data"], pydantic_model=ServiceListResponse, message="Services have retrieved successfully", meta_data=result["meta_data"] )
+    
+@service_router.delete("/delete-service"
+)
+async def delete_service_(id:int, db: AsyncSession = Depends(get_db)):
+    result= await delete_service(db, id)
+    return create_response(result=result,  message="Service has deleted successfully successfully" )
     

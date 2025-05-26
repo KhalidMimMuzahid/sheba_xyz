@@ -136,6 +136,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -810,6 +818,14 @@
         "documentation": {}
     },
     {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "modules.services.models",
         "description": "modules.services.models",
@@ -823,6 +839,14 @@
         "description": "modules.services.models",
         "isExtraImport": true,
         "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "importPath": "modules.bookings.models",
+        "description": "modules.bookings.models",
+        "isExtraImport": true,
+        "detail": "modules.bookings.models",
         "documentation": {}
     },
     {
@@ -891,6 +915,14 @@
     },
     {
         "label": "get_services",
+        "importPath": "modules.services.services",
+        "description": "modules.services.services",
+        "isExtraImport": true,
+        "detail": "modules.services.services",
+        "documentation": {}
+    },
+    {
+        "label": "delete_service",
         "importPath": "modules.services.services",
         "description": "modules.services.services",
         "isExtraImport": true,
