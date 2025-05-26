@@ -112,6 +112,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -321,6 +329,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -370,6 +386,14 @@
     },
     {
         "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -473,6 +497,15 @@
         "documentation": {}
     },
     {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "Enum",
         "importPath": "enum",
         "description": "enum",
@@ -521,11 +554,91 @@
         "documentation": {}
     },
     {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
         "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "modules.services.models",
+        "description": "modules.services.models",
+        "isExtraImport": true,
+        "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "modules.services.models",
+        "description": "modules.services.models",
+        "isExtraImport": true,
+        "detail": "modules.services.models",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "importPath": "modules.bookings.models",
+        "description": "modules.bookings.models",
+        "isExtraImport": true,
+        "detail": "modules.bookings.models",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateRequest",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceCreateResponse",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceListResponse",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
         "documentation": {}
     },
     {
@@ -585,38 +698,6 @@
         "documentation": {}
     },
     {
-        "label": "ServiceCreateRequest",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceCreateResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceListResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
-        "isExtraImport": true,
-        "detail": "modules.services.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "Service",
-        "importPath": "modules.services.models",
-        "description": "modules.services.models",
-        "isExtraImport": true,
-        "detail": "modules.services.models",
-        "documentation": {}
-    },
-    {
         "label": "query_builder",
         "importPath": "utils.query_builder",
         "description": "utils.query_builder",
@@ -630,14 +711,6 @@
         "description": "modules.services.routers",
         "isExtraImport": true,
         "detail": "modules.services.routers",
-        "documentation": {}
-    },
-    {
-        "label": "select",
-        "importPath": "sqlalchemy.future",
-        "description": "sqlalchemy.future",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.future",
         "documentation": {}
     },
     {
@@ -751,11 +824,20 @@
         "documentation": {}
     },
     {
+        "label": "StatusTypeEnum",
+        "kind": 6,
+        "importPath": "app.modules.bookings.models",
+        "description": "app.modules.bookings.models",
+        "peekOfCode": "class StatusTypeEnum(enum.Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)",
+        "detail": "app.modules.bookings.models",
+        "documentation": {}
+    },
+    {
         "label": "Booking",
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(String,  unique=False, index=False)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
+        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=True, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
         "detail": "app.modules.bookings.models",
         "documentation": {}
     },
