@@ -1,0 +1,352 @@
+[
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionContent",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes.router",
+        "description": "routes.router",
+        "isExtraImport": true,
+        "detail": "routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "register_all_errors",
+        "importPath": "exceptions.handler",
+        "description": "exceptions.handler",
+        "isExtraImport": true,
+        "detail": "exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "register_all_errors",
+        "kind": 2,
+        "importPath": "app.exceptions.handler",
+        "description": "app.exceptions.handler",
+        "peekOfCode": "def register_all_errors(app: FastAPI):\n    # Handling CustomError \n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        content = ExceptionContent(message= exc.message, resolution= exc.resolution or \"No resolution provided\",).to_dict()\n        return JSONResponse(\n            content=content,\n            status_code=exc.status_code,\n        )\n    # # Handling SQLAlchemyError",
+        "detail": "app.exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "AIPolicingException",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class AIPolicingException(Exception):\n    \"\"\"This is the base class for all AIPolicing errors\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        self.status_code = status_code\n        self.message = message\n        self.resolution = resolution\n        super().__init__(message)\nclass CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"\nclass ExceptionContent():\n    is_success: bool = False\n    error: Any = None\n    def __init__(self, message: str, resolution: Optional[str]= \"No resolution provided\"):",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionContent",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class ExceptionContent():\n    is_success: bool = False\n    error: Any = None\n    def __init__(self, message: str, resolution: Optional[str]= \"No resolution provided\"):\n        self.error = {\n            \"message\": message,\n            \"resolution\": resolution,\n        }\n    def to_dict(self):\n        return {\"is_success\": self.is_success, \"error\": self.error}",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "T",
+        "kind": 5,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass AIPolicingException(Exception):\n    \"\"\"This is the base class for all AIPolicing errors\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        self.status_code = status_code\n        self.message = message\n        self.resolution = resolution\n        super().__init__(message)\nclass CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routes.router",
+        "description": "app.routes.router",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\n# router.include_router(moodule_router, prefix=\"/module\", tags=[\"Module\"])",
+        "detail": "app.routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME:str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "Config = Settings()",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "DATABASE_URL = f\"postgresql+asyncpg://{Config.DB_USER}:{Config.DB_PASS}@localhost:5433/{Config.DB_NAME}\"\nengine = create_async_engine(DATABASE_URL, echo=True)\nasync_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "engine = create_async_engine(DATABASE_URL, echo=True)\nasync_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "async_session",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "async_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:\n        yield session",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "Base = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:\n        yield session",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "detail": "app.main",
+        "documentation": {}
+    }
+]
