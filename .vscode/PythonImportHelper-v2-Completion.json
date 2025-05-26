@@ -353,6 +353,14 @@
         "documentation": {}
     },
     {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -398,6 +406,14 @@
         "description": "sqlalchemy",
         "isExtraImport": true,
         "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
         "documentation": {}
     },
     {
@@ -658,6 +674,14 @@
         "documentation": {}
     },
     {
+        "label": "get_bookings",
+        "importPath": "modules.bookings.services",
+        "description": "modules.bookings.services",
+        "isExtraImport": true,
+        "detail": "modules.bookings.services",
+        "documentation": {}
+    },
+    {
         "label": "BookingCreateRequest",
         "importPath": "modules.bookings.schemas",
         "description": "modules.bookings.schemas",
@@ -671,6 +695,30 @@
         "description": "modules.bookings.schemas",
         "isExtraImport": true,
         "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BookingListResponse",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceReferenceResponseForBookingService",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
+        "isExtraImport": true,
+        "detail": "modules.services.schemas",
         "documentation": {}
     },
     {
@@ -754,6 +802,30 @@
         "documentation": {}
     },
     {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "transform_service_data",
+        "importPath": "modules.bookings.utils",
+        "description": "modules.bookings.utils",
+        "isExtraImport": true,
+        "detail": "modules.bookings.utils",
+        "documentation": {}
+    },
+    {
         "label": "create_service",
         "importPath": "modules.services.services",
         "description": "modules.services.services",
@@ -767,14 +839,6 @@
         "description": "modules.services.services",
         "isExtraImport": true,
         "detail": "modules.services.services",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -917,7 +981,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")",
+        "peekOfCode": "class Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)\n    customer_phone = Column(String,  unique=False, index=False)\n    service_id= Column(Integer, ForeignKey('services.id'), nullable=False)\n    status = Column(Enum(StatusTypeEnum), nullable=False, default=StatusTypeEnum.pending)\n    # relationship \n    service = relationship(\"Service\", back_populates=\"bookings\")\n    # Timestamps",
         "detail": "app.modules.bookings.models",
         "documentation": {}
     },
@@ -926,7 +990,7 @@
         "kind": 5,
         "importPath": "app.modules.bookings.routers",
         "description": "app.modules.bookings.routers",
-        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")",
+        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")\n@booking_router.get(\"/get-bookings\"\n, response_model=Response[list[BookingListResponse]]\n)\nasync def list_services(db: AsyncSession = Depends(get_db), page:int=1, limit:int=10):\n    result= await get_bookings(db, page, limit)",
         "detail": "app.modules.bookings.routers",
         "documentation": {}
     },
@@ -953,7 +1017,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass BookingListResponse(BookingCreateRequest):",
+        "peekOfCode": "class BookingCreateResponse(BaseModel):\n    id: int\n    customer_name : str\n    customer_phone: str\n    status: StatusTypeEnum\n    service : ServiceReferenceResponseForBookingService\n    created_at: datetime\n    updated_at: datetime\n    class Config:\n        orm_mode = True",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -962,8 +1026,17 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingListResponse(BookingCreateRequest):\n    # extra_field: str  # Add extra fields if needed\n    pass",
+        "peekOfCode": "class BookingListResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
         "detail": "app.modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "transform_service_data",
+        "kind": 2,
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
+        "peekOfCode": "def transform_service_data(booking):\n    \"\"\"Transforms a Booking ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": booking.id,\n        \"customer_name\": booking.customer_name,\n        \"customer_phone\": booking.customer_phone,\n        \"status\": booking.status,\n        \"service\": ServiceReferenceResponseForBookingService(**booking.service.__dict__) if booking.service else None,\n        \"created_at\": booking.created_at,\n        \"updated_at\": booking.updated_at",
+        "detail": "app.modules.bookings.utils",
         "documentation": {}
     },
     {
@@ -980,7 +1053,7 @@
         "kind": 5,
         "importPath": "app.modules.services.routers",
         "description": "app.modules.services.routers",
-        "peekOfCode": "service_router = APIRouter()\n@service_router.post(\"/add-service\", response_model=  Response[ServiceCreateResponse]\n)\nasync def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_service(db=db, name= service.name, category= service.category, description= service.description, price=service.price )\n    return create_response(result=result, pydantic_model=ServiceCreateResponse, message=\"Service has added successfully\")\n@service_router.get(\"/get-services\"\n# , response_model=Response[list[ServiceListResponse]]\n)\nasync def list_services(page:int=1, limit:int=10, category:str=None, db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "service_router = APIRouter()\n@service_router.post(\"/add-service\", response_model=  Response[ServiceCreateResponse]\n)\nasync def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_service(db=db, name= service.name, category= service.category, description= service.description, price=service.price )\n    return create_response(result=result, pydantic_model=ServiceCreateResponse, message=\"Service has added successfully\")\n@service_router.get(\"/get-services\"\n, response_model=Response[list[ServiceListResponse]]\n)\nasync def list_services(page:int=1, limit:int=10, category:str=None, db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.services.routers",
         "documentation": {}
     },
@@ -1034,7 +1107,7 @@
         "kind": 6,
         "importPath": "app.responses.models",
         "description": "app.responses.models",
-        "peekOfCode": "class MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str",
+        "peekOfCode": "class MetaData(BaseModel):\n    previous_page: Optional[int]  # Can be int or None\n    next_page: Optional[int]  # Can be int or None\n    current_page: int\n    total_page: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str",
         "detail": "app.responses.models",
         "documentation": {}
     },
@@ -1052,7 +1125,7 @@
         "kind": 5,
         "importPath": "app.responses.models",
         "description": "app.responses.models",
-        "peekOfCode": "T = TypeVar(\"T\")\nclass MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass MetaData(BaseModel):\n    previous_page: Optional[int]  # Can be int or None\n    next_page: Optional[int]  # Can be int or None\n    current_page: int\n    total_page: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True",
         "detail": "app.responses.models",
         "documentation": {}
     },

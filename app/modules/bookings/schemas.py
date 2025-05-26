@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from enum import Enum
+from datetime import datetime
 from modules.services.schemas import ServiceReferenceResponseForBookingService
 
 class StatusTypeEnum(str, Enum):
@@ -20,11 +21,13 @@ class BookingCreateResponse(BaseModel):
     customer_phone: str
     status: StatusTypeEnum
     service : ServiceReferenceResponseForBookingService
+    created_at: datetime
+    updated_at: datetime
     class Config:
         orm_mode = True
         extra = "ignore"
 
 
-class BookingListResponse(BookingCreateRequest):
+class BookingListResponse(BookingCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass

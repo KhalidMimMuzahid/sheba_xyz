@@ -18,7 +18,7 @@ async def add_service(service: ServiceCreateRequest, db: AsyncSession = Depends(
 
 
 @service_router.get("/get-services"
-# , response_model=Response[list[ServiceListResponse]]
+, response_model=Response[list[ServiceListResponse]]
 )
 async def list_services(page:int=1, limit:int=10, category:str=None, db: AsyncSession = Depends(get_db)):
     result= await get_services(db, page, limit, category)

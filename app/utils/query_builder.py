@@ -78,7 +78,7 @@ async def query_builder(
         data = [transform_fn(item) for item in data]
 
     #  Construct metadata response
-    meta_data = MetaData(prev=prev_page, next=next_page, current=page, total=total_pages)
+    meta_data = MetaData(previous_page=prev_page, next_page=next_page, current_page=page, total_page=total_pages)
 
     return {"data": data, "meta_data": meta_data}
 

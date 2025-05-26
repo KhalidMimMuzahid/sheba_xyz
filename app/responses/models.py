@@ -3,12 +3,11 @@ from pydantic import BaseModel
 
 T = TypeVar("T")
 
-
 class MetaData(BaseModel):
-    prev: Optional[int]  # Can be int or None
-    next: Optional[int]  # Can be int or None
-    current: int
-    total: int # total number of pages depending on page limit
+    previous_page: Optional[int]  # Can be int or None
+    next_page: Optional[int]  # Can be int or None
+    current_page: int
+    total_page: int # total number of pages depending on page limit
     class Config:
         orm_mode = True
 
