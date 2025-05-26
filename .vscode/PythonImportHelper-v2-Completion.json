@@ -104,6 +104,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -114,6 +122,22 @@
     },
     {
         "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -161,6 +185,70 @@
         "documentation": {}
     },
     {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -193,6 +281,22 @@
         "documentation": {}
     },
     {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeMeta",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -218,6 +322,14 @@
     },
     {
         "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -281,6 +393,22 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "create_response",
         "importPath": "responses.handler",
         "description": "responses.handler",
@@ -290,18 +418,18 @@
     },
     {
         "label": "ServiceCreateRequest",
-        "importPath": "app.modules.services.schemas",
-        "description": "app.modules.services.schemas",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
         "isExtraImport": true,
-        "detail": "app.modules.services.schemas",
+        "detail": "modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceCreateResponse",
-        "importPath": "app.modules.services.schemas",
-        "description": "app.modules.services.schemas",
+        "importPath": "modules.services.schemas",
+        "description": "modules.services.schemas",
         "isExtraImport": true,
-        "detail": "app.modules.services.schemas",
+        "detail": "modules.services.schemas",
         "documentation": {}
     },
     {
@@ -473,6 +601,42 @@
         "description": "app.modules.services.schemas",
         "peekOfCode": "class ServiceReferenceResponseForBookingService(BaseModel):\n    id: int\n    name : str\n    category : str\n    # description : str\n    # price : int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.services.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "kind": 2,
+        "importPath": "app.responses.handler",
+        "description": "app.responses.handler",
+        "peekOfCode": "def create_response(message: str,\n                    result: Union[Base, List[Base], dict, List[dict], None], \n                    pydantic_model: Optional[Type[declarative_base]] = None,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    if not result:\n        return Response(message=message, data=result, meta_data=meta_data)\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects",
+        "detail": "app.responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "kind": 6,
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
+        "peekOfCode": "class MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str",
+        "detail": "app.responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 6,
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
+        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T\n    meta_data: Optional[MetaData]",
+        "detail": "app.responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "T",
+        "kind": 5,
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {

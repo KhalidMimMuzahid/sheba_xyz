@@ -5,7 +5,7 @@ from database import get_db
 from modules.services.services import create_service
 from responses.models import Response
 from responses.handler import create_response
-from app.modules.services.schemas import ServiceCreateRequest, ServiceCreateResponse
+from modules.services.schemas import ServiceCreateRequest, ServiceCreateResponse
 
 service_router = APIRouter()
 
