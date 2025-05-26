@@ -3,6 +3,7 @@ from passlib.context import CryptContext
 from config import Config
 import jwt
 passwd_context = CryptContext(schemes=["bcrypt"])
+from exceptions.models import CustomError
 
 ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second
 
@@ -26,3 +27,14 @@ def create_access_token(
         payload=payload, key=Config.JWT_SECRET, algorithm= Config.JWT_ALGORITHM
     )
     return token
+
+def decode_access_token(token: str) -> dict:
+    try:
+        token_data = jwt.decode(
+            jwt=token, key=Config.JWT_SECRET, algorithms=[Config.JWT_ALGORITHM]
+        )
+        return token_data
+    except jwt.ExpiredSignatureError:
+        raise CustomError(message= "your access token has been expired", status_code=401, resolution="please sign in again.")
+    except jwt.InvalidTokenError:
+        raise CustomError(message= "your access token is invalid", status_code=401, resolution="please provide a valid token.")

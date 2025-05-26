@@ -1,18 +1,18 @@
 [
     {
-        "label": "JSONResponse",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "fastapi.responses",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "ResponseValidationError",
-        "importPath": "fastapi.exceptions",
-        "description": "fastapi.exceptions",
+        "label": "Security",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "fastapi.exceptions",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -112,11 +112,123 @@
         "documentation": {}
     },
     {
-        "label": "SQLAlchemyError",
-        "importPath": "sqlalchemy.exc",
-        "description": "sqlalchemy.exc",
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "sqlalchemy.exc",
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
         "documentation": {}
     },
     {
@@ -176,68 +288,52 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "re",
         "description": "re",
         "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -1162,30 +1258,6 @@
         "documentation": {}
     },
     {
-        "label": "generate_passwd_hash",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
-        "isExtraImport": true,
-        "detail": "utils.manage_auth",
-        "documentation": {}
-    },
-    {
-        "label": "verify_password",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
-        "isExtraImport": true,
-        "detail": "utils.manage_auth",
-        "documentation": {}
-    },
-    {
-        "label": "create_access_token",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
-        "isExtraImport": true,
-        "detail": "utils.manage_auth",
-        "documentation": {}
-    },
-    {
         "label": "model_to_dict",
         "importPath": "utils.model_to_dict",
         "description": "utils.model_to_dict",
@@ -1338,6 +1410,41 @@
         "description": "exceptions.handler",
         "isExtraImport": true,
         "detail": "exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate_user",
+        "importPath": "dependencies.authenticate_user",
+        "description": "dependencies.authenticate_user",
+        "isExtraImport": true,
+        "detail": "dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "TokenData",
+        "kind": 6,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "class TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(\n    request: Request, credentials: HTTPAuthorizationCredentials = Security(security)\n):\n    \"\"\"Middleware-style function for authenticating users before hitting the router.\"\"\"\n    # path = request.url.path \n    path = urlparse(request.url.path).path  # Extract path without query parameters",
+        "detail": "app.dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "security",
+        "kind": 5,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define included routes that require authentication\nPRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\"\n    # Add more private routes here\n}\n# Define the user payload structure",
+        "detail": "app.dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "PRIVATE_ROUTES",
+        "kind": 5,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "PRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\"\n    # Add more private routes here\n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str",
+        "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
     {
@@ -1683,11 +1790,20 @@
         "documentation": {}
     },
     {
+        "label": "decode_access_token",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=Config.JWT_SECRET, algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        raise CustomError(message= \"your access token has been expired\", status_code=401, resolution=\"please sign in again.\")\n    except jwt.InvalidTokenError:\n        raise CustomError(message= \"your access token is invalid\", status_code=401, resolution=\"please provide a valid token.\")",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
         "label": "passwd_context",
         "kind": 5,
         "importPath": "app.utils.manage_auth",
         "description": "app.utils.manage_auth",
-        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nfrom exceptions.models import CustomError\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False",
         "detail": "app.utils.manage_auth",
         "documentation": {}
     },
