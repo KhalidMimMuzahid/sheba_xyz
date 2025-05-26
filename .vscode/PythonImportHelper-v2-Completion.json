@@ -1579,7 +1579,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserCreateRequest(BaseModel):\n    email :str\n    name :str\n    password :str\nclass UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    # password :str",
+        "peekOfCode": "class UserCreateRequest(BaseModel):\n    email :str\n    name :str\n    password :str\nclass UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    access_token:str",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1588,7 +1588,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    # password :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")\nclass UserLogInResponse(BaseModel):",
+        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    access_token:str\n    # password :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1597,7 +1597,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    name :str\n    role : UserRoleEnum\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },

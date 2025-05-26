@@ -26,7 +26,16 @@ async def create_user(db: AsyncSession, email :str, name :str, password :str):
         subject="Welcome to Sheba.xyz, user Registration Successful",
         html_body = make_html_body(name=name, email=email,  password=password, role=new_user.role.value)
     )) 
-    print("email has sent successfully" if is_sent else "email has not sent somehow")
+    # print("email has sent successfully" if is_sent else "email has not sent somehow")
+    access_token = create_access_token(
+        user_data= {
+            "id": new_user.id,
+            "email": new_user.email,
+            "role": new_user.role.value
+        }
+    )
+    new_user = model_to_dict(new_user)
+    new_user["access_token"] = access_token
     return new_user
 
 

@@ -16,6 +16,7 @@ class UserCreateResponse(BaseModel):
     email :str
     name :str
     role : UserRoleEnum
+    access_token:str
     # password :str
     class Config:
         orm_mode = True
@@ -25,8 +26,8 @@ class UserCreateResponse(BaseModel):
 class UserLogInResponse(BaseModel):
     id: int
     email :str
-    role : UserRoleEnum
     name :str
+    role : UserRoleEnum
     access_token:str
     class Config:
         orm_mode = True
