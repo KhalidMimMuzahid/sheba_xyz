@@ -77,6 +77,11 @@ Look for:
 ✅ Postgres is up – starting FastAPI...
 INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 ```
+### Interactive API Docs
+
+- Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
 
 ### Stopping & Cleaning Up
 
