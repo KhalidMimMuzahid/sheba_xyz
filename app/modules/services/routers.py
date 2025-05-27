@@ -32,9 +32,7 @@ async def delete_service_(id:int, db: AsyncSession = Depends(get_db)):
     return create_response(result=result,  message="Service has deleted successfully successfully" )
 
 
-@service_router.put("/update-service"
-                    , response_model=Response[ServiceUpdateRequest]
-                    )
+@service_router.put("/update-service", response_model=Response[ServiceUpdateRequest])
 async def update_service_(
     service_id: int,
     name: str=None,
@@ -51,5 +49,4 @@ async def update_service_(
         description=description,
         price=price,
     )
-    # return result
     return create_response(result=result, pydantic_model=ServiceUpdateRequest, message="Service updated successfully")

@@ -938,6 +938,14 @@
         "documentation": {}
     },
     {
+        "label": "update_booking_status",
+        "importPath": "modules.bookings.services",
+        "description": "modules.bookings.services",
+        "isExtraImport": true,
+        "detail": "modules.bookings.services",
+        "documentation": {}
+    },
+    {
         "label": "BookingCreateRequest",
         "importPath": "modules.bookings.schemas",
         "description": "modules.bookings.schemas",
@@ -963,6 +971,30 @@
     },
     {
         "label": "checkBookingStatusResponse",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateBookingStatusResponse",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "StatusTypeEnum",
+        "importPath": "modules.bookings.schemas",
+        "description": "modules.bookings.schemas",
+        "isExtraImport": true,
+        "detail": "modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "StatusTypeEnum",
         "importPath": "modules.bookings.schemas",
         "description": "modules.bookings.schemas",
         "isExtraImport": true,
@@ -1139,6 +1171,14 @@
     },
     {
         "label": "make_html_body",
+        "importPath": "modules.bookings.utils",
+        "description": "modules.bookings.utils",
+        "isExtraImport": true,
+        "detail": "modules.bookings.utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_html_body_for_changing_status",
         "importPath": "modules.bookings.utils",
         "description": "modules.bookings.utils",
         "isExtraImport": true,
@@ -1434,7 +1474,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define included routes that require authentication\nPRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\"\n    # Add more private routes here\n}\n# Define the user payload structure",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define included routes that require authentication\nPRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\",\n    \"/api/v1/bookings/update-booking-status\"\n    # Add more private routes here\n}",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -1443,7 +1483,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "PRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\"\n    # Add more private routes here\n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str",
+        "peekOfCode": "PRIVATE_ROUTES = {\n    \"/api/v1/services/add-service\",\n    \"/api/v1/services/delete-service\",\n    \"/api/v1/services/update-service\", \n    \"/api/v1/services/get-bookings\",\n    \"/api/v1/bookings/update-booking-status\"\n    # Add more private routes here\n}\n# Define the user payload structure\nclass TokenData(BaseModel):",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -1497,7 +1537,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.models",
         "description": "app.modules.bookings.models",
-        "peekOfCode": "class StatusTypeEnum(enum.Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)",
+        "peekOfCode": "class StatusTypeEnum(enum.Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass Booking(Base):\n    __tablename__ = \"bookings\"\n    id = Column(Integer, primary_key=True, index=True)\n    customer_name = Column(String,  unique=False, index=False)",
         "detail": "app.modules.bookings.models",
         "documentation": {}
     },
@@ -1515,7 +1555,7 @@
         "kind": 5,
         "importPath": "app.modules.bookings.routers",
         "description": "app.modules.bookings.routers",
-        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_service(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, customer_email= booking.customer_email, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")\n@booking_router.get(\"/get-bookings\"\n, response_model=Response[list[BookingListResponse]]\n)\nasync def list_services(db: AsyncSession = Depends(get_db), page:int=1, limit:int=10):\n    result= await get_bookings(db, page, limit)",
+        "peekOfCode": "booking_router = APIRouter()\n@booking_router.post(\"/booking-service\", response_model=  Response[BookingCreateResponse])\nasync def add_booking(booking: BookingCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await booking_service(db=db, customer_name= booking.customer_name, customer_phone= booking.customer_phone, customer_email= booking.customer_email, service_id=booking.service_id )\n    return create_response(result=result, pydantic_model=BookingCreateResponse, message=\"Service has booked successfully\")\n@booking_router.get(\"/get-bookings\"\n, response_model=Response[list[BookingListResponse]]\n)\nasync def list_bookings(db: AsyncSession = Depends(get_db), page:int=1, limit:int=10):\n    result= await get_bookings(db, page, limit)",
         "detail": "app.modules.bookings.routers",
         "documentation": {}
     },
@@ -1524,7 +1564,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"Completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    customer_email: str",
+        "peekOfCode": "class StatusTypeEnum(str, Enum):\n    pending = \"pending\" #Booking request has been made but not yet confirmed.\n    confirmed = \"confirmed\" # Booking is accepted and scheduled.\n    in_progress= \"in_progress\" # The service is currently being provided.\n    completed = \"completed\" # The service has been successfully completed.\n    cancelled=\"cancelled\"   #Booking was cancelled by the user or provider.\nclass BookingCreateRequest(BaseModel):\n    customer_name : str\n    customer_phone: str\n    customer_email: str",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1551,7 +1591,7 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class BookingListResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass checkBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
+        "peekOfCode": "class BookingListResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass checkBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass UpdateBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1560,7 +1600,16 @@
         "kind": 6,
         "importPath": "app.modules.bookings.schemas",
         "description": "app.modules.bookings.schemas",
-        "peekOfCode": "class checkBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
+        "peekOfCode": "class checkBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass UpdateBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
+        "detail": "app.modules.bookings.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateBookingStatusResponse",
+        "kind": 6,
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
+        "peekOfCode": "class UpdateBookingStatusResponse(BookingCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass",
         "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
@@ -1578,7 +1627,16 @@
         "kind": 2,
         "importPath": "app.modules.bookings.utils",
         "description": "app.modules.bookings.utils",
-        "peekOfCode": "def make_html_body(customer_name: str, customer_phone:str, customer_email:str, service_id = int):\n    html_body = f\"\"\"\n    <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #e0e0e0;\">\n        <h2 style=\"text-align: center; color: #333;\">🎉 Booking Confirmed!</h2>\n        <p style=\"font-size: 16px; color: #444;\">Hi <strong>{customer_name}</strong>,</p>\n        <p style=\"font-size: 15px; color: #555;\">\n            Your service booking has been successfully confirmed. Here are the details:\n        </p>\n        <div style=\"background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin-top: 15px;\">\n            <p><strong>📞 Phone:</strong> {customer_phone}</p>",
+        "peekOfCode": "def make_html_body(customer_name: str, customer_phone:str, customer_email:str, service_id : int):\n    html_body = f\"\"\"\n    <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #e0e0e0;\">\n        <h2 style=\"text-align: center; color: #333;\">🎉 Booking Confirmed!</h2>\n        <p style=\"font-size: 16px; color: #444;\">Hi <strong>{customer_name}</strong>,</p>\n        <p style=\"font-size: 15px; color: #555;\">\n            Your service booking has been successfully confirmed. Here are the details:\n        </p>\n        <div style=\"background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin-top: 15px;\">\n            <p><strong>📞 Phone:</strong> {customer_phone}</p>",
+        "detail": "app.modules.bookings.utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_html_body_for_changing_status",
+        "kind": 2,
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
+        "peekOfCode": "def make_html_body_for_changing_status(customer_name: str, customer_phone:str, customer_email:str, booking_id: int, status: str):\n    html_body = f\"\"\"\n    <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f4f8fb; border-radius: 8px; border: 1px solid #dce3e8;\">\n        <h2 style=\"text-align: center; color: #2b3e50;\">🔄 Booking Status Updated</h2>\n        <p style=\"font-size: 16px; color: #333;\">Hello <strong>{customer_name}</strong>,</p>\n        <p style=\"font-size: 15px; color: #555;\">\n            We wanted to let you know that the status of your booking has been updated. Below are the updated details:\n        </p>\n        <div style=\"background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #ccc; margin-top: 15px;\">\n            <p><strong>📞 Phone:</strong> {customer_phone}</p>",
         "detail": "app.modules.bookings.utils",
         "documentation": {}
     },

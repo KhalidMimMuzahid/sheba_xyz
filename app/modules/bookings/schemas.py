@@ -7,7 +7,7 @@ class StatusTypeEnum(str, Enum):
     pending = "pending" #Booking request has been made but not yet confirmed.
     confirmed = "confirmed" # Booking is accepted and scheduled.
     in_progress= "in_progress" # The service is currently being provided.
-    completed = "Completed" # The service has been successfully completed.
+    completed = "completed" # The service has been successfully completed.
     cancelled="cancelled"   #Booking was cancelled by the user or provider.
 
 class BookingCreateRequest(BaseModel):
@@ -35,6 +35,10 @@ class BookingListResponse(BookingCreateResponse):
     pass
 
 class checkBookingStatusResponse(BookingCreateResponse):
+    # extra_field: str  # Add extra fields if needed
+    pass
+
+class UpdateBookingStatusResponse(BookingCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass
 

@@ -13,7 +13,8 @@ PRIVATE_ROUTES = {
     "/api/v1/services/add-service",
     "/api/v1/services/delete-service",
     "/api/v1/services/update-service", 
-    "/api/v1/services/get-bookings"
+    "/api/v1/services/get-bookings",
+    "/api/v1/bookings/update-booking-status"
     # Add more private routes here
 }
 

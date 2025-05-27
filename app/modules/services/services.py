@@ -63,14 +63,14 @@ async def update_service(
     description:str=None,
     price: int=None
 ):
-    # Fetch the vehicle from the database
+    # Fetch the service from the database
     service_result = await db.execute(select(Service).where(Service.id == service_id))
     service = service_result.scalar_one_or_none()
 
     if not service:
         raise CustomError(message="Service not found", status_code=404, resolution="Provide a valid service_id")
 
-    # Update vehicle data
+    # Update service data
     if name:
         service.name = name
     if category:
