@@ -2041,7 +2041,7 @@
         "kind": 6,
         "importPath": "app.config",
         "description": "app.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME: str\n    DB_PORT:str\n    SENDER_PASSWORD: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME: str\n    DB_PORT: str\n    DB_HOST: str\n    SENDER_PASSWORD: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(",
         "detail": "app.config",
         "documentation": {}
     },
@@ -2059,7 +2059,7 @@
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "DATABASE_URL = f\"postgresql+asyncpg://{Config.DB_USER}:{Config.DB_PASS}@localhost:{Config.DB_PORT}/{Config.DB_NAME}\"\nengine = create_async_engine(DATABASE_URL, echo=True)\nasync_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():",
+        "peekOfCode": "DATABASE_URL = (\n    f\"postgresql+asyncpg://\"\n    f\"{Config.DB_USER}:\"\n    f\"{Config.DB_PASS}@\"\n    f\"{Config.DB_HOST}:\"\n    f\"{Config.DB_PORT}/\"\n    f\"{Config.DB_NAME}\"\n)\nprint(\"\\n\",DATABASE_URL, \"\\n\")\nengine = create_async_engine(DATABASE_URL, echo=True)",
         "detail": "app.database",
         "documentation": {}
     },

@@ -5,8 +5,16 @@ from sqlalchemy.orm import sessionmaker , declarative_base
 from app.config import Config
 
 # DATABASE_URL= 'postgresql://{username}:{password}@localhost:{port_no_that_used_postgresql}/{databaseName}'
-DATABASE_URL = f"postgresql+asyncpg://{Config.DB_USER}:{Config.DB_PASS}@localhost:{Config.DB_PORT}/{Config.DB_NAME}"
-
+# DATABASE_URL = f"postgresql+asyncpg://{Config.DB_USER}:{Config.DB_PASS}@localhost:{Config.DB_PORT}/{Config.DB_NAME}"
+DATABASE_URL = (
+    f"postgresql+asyncpg://"
+    f"{Config.DB_USER}:"
+    f"{Config.DB_PASS}@"
+    f"{Config.DB_HOST}:"
+    f"{Config.DB_PORT}/"
+    f"{Config.DB_NAME}"
+)
+print("\n",DATABASE_URL, "\n")
 engine = create_async_engine(DATABASE_URL, echo=True)
 
 async_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)

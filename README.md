@@ -4,6 +4,9 @@
 
 to test:  PYTHONPATH=. pytest -v
 
+docker-compose build
+docker-compose up
+
 pip3 install -r requirements.txt
 set up database for the user and password with the correct database name
 uvicorn main:app --reload -->
@@ -26,6 +29,7 @@ A FastAPI–powered backend for user authentication, service management, and boo
 
 ## 🚀 Setup & Run
 
+
 ### 1. Clone the repository
 
 ```bash
@@ -33,6 +37,55 @@ git clone https://github.com/KhalidMimMuzahid/service_booking_fastapi.git
 cd service_booking_fastapi
 ```
 
+## With Docker
+
+### Ensure `start.sh` is executable
+
+```bash
+chmod +x start.sh
+```
+
+### Build and start the containers
+
+```bash
+docker-compose up --build -d
+```
+
+This creates two containers:
+- **web** – your FastAPI app, listening on port 8000  
+- **db**  – Postgres database, listening on port 5432  
+
+### Verify everything is up
+
+```bash
+docker-compose ps
+```
+
+### View logs
+
+```bash
+docker-compose logs -f web
+```
+
+Look for:
+
+```
+✅ Postgres is up – starting FastAPI...
+INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+```
+
+## Stopping & Cleaning Up
+
+- Stop and remove containers & network:
+  ```bash
+  docker-compose down
+  ```
+- Remove volumes (data will be lost):
+  ```bash
+  docker-compose down -v
+  ```
+
+## With Your Local Machine
 ### 2. Create and activate a virtual environment
 
 ```bash
@@ -51,14 +104,14 @@ pip install -r requirements.txt
 Update the `.env` file in the project root with your PostgreSQL and email credentials:
 
 ```env
-# Environment Variables
-DB_USER="postgres"
-DB_PASS="test1234%21"
-DB_NAME="sheba_xyz"
-DB_PORT="5433"  # Change to 5432 if that’s your local setup
-SENDER_PASSWORD="ysnc qcsv ybmy lnlb"
-JWT_ALGORITHM="HS256"
-JWT_SECRET="secret_key"
+DB_USER=postgres
+DB_PASS=test1234
+DB_NAME=sheba_xyz
+DB_PORT=5432
+DB_HOST=db
+SENDER_PASSWORD=ysnc qcsv ybmy lnlb
+JWT_ALGORITHM=HS256
+JWT_SECRET=secret_key
 ```
 
 > ⚠️ Ensure PostgreSQL is running and update the `.env` credentials according to your machine setup.
