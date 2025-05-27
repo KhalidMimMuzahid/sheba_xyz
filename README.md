@@ -24,6 +24,7 @@ A FastAPI–powered backend for user authentication, service management, and boo
 - Python 3.10+
 - Git
 - PostgreSQL installed on your machine
+- Docker Desktop
 
 ---
 
@@ -40,17 +41,14 @@ cd service_booking_fastapi
 ## With Docker
 
 ### Ensure `start.sh` is executable
-
 ```bash
 chmod +x start.sh
 ```
-
 ### Build and start the containers
 
 ```bash
 docker-compose up --build -d
 ```
-
 This creates two containers:
 - **web** – your FastAPI app, listening on port 8000  
 - **db**  – Postgres database, listening on port 5432  
@@ -74,7 +72,7 @@ Look for:
 INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 ```
 
-## Stopping & Cleaning Up
+### Stopping & Cleaning Up
 
 - Stop and remove containers & network:
   ```bash
