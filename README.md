@@ -7,6 +7,12 @@ to test:  PYTHONPATH=. pytest -v
 docker-compose build
 docker-compose up
 
+for unit testing 
+docker-compose exec web bash
+pip3 install pytest pytest-asyncio httpx aiosqlite
+PYTHONPATH=. pytest -v
+
+
 pip3 install -r requirements.txt
 set up database for the user and password with the correct database name
 uvicorn main:app --reload -->
@@ -137,6 +143,16 @@ The API will be available at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## 🧪 How to Run Tests
 
+### with docker
+after starting your docker (docker-compose up --build -d),
+```bash
+docker-compose exec web bash
+PYTHONPATH=. pytest -v
+```
+you will see, all 6 api passed
+
+
+### with your local machine
 1. Install test dependencies:
 
 ```bash

@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# dev / test deps
+pytest
+pytest-asyncio
+httpx
+aiosqlite
