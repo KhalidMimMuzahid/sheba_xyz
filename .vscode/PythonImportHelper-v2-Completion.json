@@ -193,106 +193,106 @@
     },
     {
         "label": "decode_access_token",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
         "isExtraImport": true,
-        "detail": "utils.manage_auth",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {
         "label": "generate_passwd_hash",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
         "isExtraImport": true,
-        "detail": "utils.manage_auth",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {
         "label": "verify_password",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
         "isExtraImport": true,
-        "detail": "utils.manage_auth",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {
         "label": "create_access_token",
-        "importPath": "utils.manage_auth",
-        "description": "utils.manage_auth",
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
         "isExtraImport": true,
-        "detail": "utils.manage_auth",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "ExceptionContent",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
         "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "app.exceptions.models",
         "documentation": {}
     },
     {
@@ -681,67 +681,91 @@
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "init_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
         "documentation": {}
     },
     {
@@ -842,163 +866,179 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
         "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "app.responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
+        "isExtraImport": true,
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "importPath": "app.responses.handler",
+        "description": "app.responses.handler",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "app.responses.handler",
         "documentation": {}
     },
     {
         "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "importPath": "app.responses.handler",
+        "description": "app.responses.handler",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "app.responses.handler",
         "documentation": {}
     },
     {
         "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "importPath": "app.responses.handler",
+        "description": "app.responses.handler",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "app.responses.handler",
         "documentation": {}
     },
     {
         "label": "booking_service",
-        "importPath": "modules.bookings.services",
-        "description": "modules.bookings.services",
+        "importPath": "app.modules.bookings.services",
+        "description": "app.modules.bookings.services",
         "isExtraImport": true,
-        "detail": "modules.bookings.services",
+        "detail": "app.modules.bookings.services",
         "documentation": {}
     },
     {
         "label": "get_bookings",
-        "importPath": "modules.bookings.services",
-        "description": "modules.bookings.services",
+        "importPath": "app.modules.bookings.services",
+        "description": "app.modules.bookings.services",
         "isExtraImport": true,
-        "detail": "modules.bookings.services",
+        "detail": "app.modules.bookings.services",
         "documentation": {}
     },
     {
         "label": "check_booking_status_service",
-        "importPath": "modules.bookings.services",
-        "description": "modules.bookings.services",
+        "importPath": "app.modules.bookings.services",
+        "description": "app.modules.bookings.services",
         "isExtraImport": true,
-        "detail": "modules.bookings.services",
+        "detail": "app.modules.bookings.services",
         "documentation": {}
     },
     {
         "label": "update_booking_status",
-        "importPath": "modules.bookings.services",
-        "description": "modules.bookings.services",
+        "importPath": "app.modules.bookings.services",
+        "description": "app.modules.bookings.services",
         "isExtraImport": true,
-        "detail": "modules.bookings.services",
+        "detail": "app.modules.bookings.services",
         "documentation": {}
     },
     {
         "label": "BookingCreateRequest",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "BookingCreateResponse",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "BookingListResponse",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "checkBookingStatusResponse",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "UpdateBookingStatusResponse",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "StatusTypeEnum",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
         "label": "StatusTypeEnum",
-        "importPath": "modules.bookings.schemas",
-        "description": "modules.bookings.schemas",
+        "importPath": "app.modules.bookings.schemas",
+        "description": "app.modules.bookings.schemas",
         "isExtraImport": true,
-        "detail": "modules.bookings.schemas",
+        "detail": "app.modules.bookings.schemas",
         "documentation": {}
     },
     {
@@ -1027,58 +1067,58 @@
     },
     {
         "label": "ServiceReferenceResponseForBookingService",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceReferenceResponseForBookingService",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceReferenceResponseForBookingService",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceCreateRequest",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceCreateResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceListResponse",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
         "label": "ServiceUpdateRequest",
-        "importPath": "modules.services.schemas",
-        "description": "modules.services.schemas",
+        "importPath": "app.modules.services.schemas",
+        "description": "app.modules.services.schemas",
         "isExtraImport": true,
-        "detail": "modules.services.schemas",
+        "detail": "app.modules.services.schemas",
         "documentation": {}
     },
     {
@@ -1115,226 +1155,226 @@
     },
     {
         "label": "Service",
-        "importPath": "modules.services.models",
-        "description": "modules.services.models",
+        "importPath": "app.modules.services.models",
+        "description": "app.modules.services.models",
         "isExtraImport": true,
-        "detail": "modules.services.models",
+        "detail": "app.modules.services.models",
         "documentation": {}
     },
     {
         "label": "Service",
-        "importPath": "modules.services.models",
-        "description": "modules.services.models",
+        "importPath": "app.modules.services.models",
+        "description": "app.modules.services.models",
         "isExtraImport": true,
-        "detail": "modules.services.models",
+        "detail": "app.modules.services.models",
         "documentation": {}
     },
     {
         "label": "Booking",
-        "importPath": "modules.bookings.models",
-        "description": "modules.bookings.models",
+        "importPath": "app.modules.bookings.models",
+        "description": "app.modules.bookings.models",
         "isExtraImport": true,
-        "detail": "modules.bookings.models",
+        "detail": "app.modules.bookings.models",
         "documentation": {}
     },
     {
         "label": "Booking",
-        "importPath": "modules.bookings.models",
-        "description": "modules.bookings.models",
+        "importPath": "app.modules.bookings.models",
+        "description": "app.modules.bookings.models",
         "isExtraImport": true,
-        "detail": "modules.bookings.models",
+        "detail": "app.modules.bookings.models",
         "documentation": {}
     },
     {
         "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
+        "importPath": "app.utils.query_builder",
+        "description": "app.utils.query_builder",
         "isExtraImport": true,
-        "detail": "utils.query_builder",
+        "detail": "app.utils.query_builder",
         "documentation": {}
     },
     {
         "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
+        "importPath": "app.utils.query_builder",
+        "description": "app.utils.query_builder",
         "isExtraImport": true,
-        "detail": "utils.query_builder",
+        "detail": "app.utils.query_builder",
         "documentation": {}
     },
     {
         "label": "transform_service_data",
-        "importPath": "modules.bookings.utils",
-        "description": "modules.bookings.utils",
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
         "isExtraImport": true,
-        "detail": "modules.bookings.utils",
+        "detail": "app.modules.bookings.utils",
         "documentation": {}
     },
     {
         "label": "make_html_body",
-        "importPath": "modules.bookings.utils",
-        "description": "modules.bookings.utils",
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
         "isExtraImport": true,
-        "detail": "modules.bookings.utils",
+        "detail": "app.modules.bookings.utils",
         "documentation": {}
     },
     {
         "label": "make_html_body_for_changing_status",
-        "importPath": "modules.bookings.utils",
-        "description": "modules.bookings.utils",
+        "importPath": "app.modules.bookings.utils",
+        "description": "app.modules.bookings.utils",
         "isExtraImport": true,
-        "detail": "modules.bookings.utils",
+        "detail": "app.modules.bookings.utils",
         "documentation": {}
     },
     {
         "label": "send_email",
-        "importPath": "utils.send_mail",
-        "description": "utils.send_mail",
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
         "isExtraImport": true,
-        "detail": "utils.send_mail",
+        "detail": "app.utils.send_mail",
         "documentation": {}
     },
     {
         "label": "EmailSchema",
-        "importPath": "utils.send_mail",
-        "description": "utils.send_mail",
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
         "isExtraImport": true,
-        "detail": "utils.send_mail",
+        "detail": "app.utils.send_mail",
         "documentation": {}
     },
     {
         "label": "send_email",
-        "importPath": "utils.send_mail",
-        "description": "utils.send_mail",
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
         "isExtraImport": true,
-        "detail": "utils.send_mail",
+        "detail": "app.utils.send_mail",
         "documentation": {}
     },
     {
         "label": "EmailSchema",
-        "importPath": "utils.send_mail",
-        "description": "utils.send_mail",
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
         "isExtraImport": true,
-        "detail": "utils.send_mail",
+        "detail": "app.utils.send_mail",
         "documentation": {}
     },
     {
         "label": "create_service",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
+        "importPath": "app.modules.services.services",
+        "description": "app.modules.services.services",
         "isExtraImport": true,
-        "detail": "modules.services.services",
+        "detail": "app.modules.services.services",
         "documentation": {}
     },
     {
         "label": "get_services",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
+        "importPath": "app.modules.services.services",
+        "description": "app.modules.services.services",
         "isExtraImport": true,
-        "detail": "modules.services.services",
+        "detail": "app.modules.services.services",
         "documentation": {}
     },
     {
         "label": "delete_service",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
+        "importPath": "app.modules.services.services",
+        "description": "app.modules.services.services",
         "isExtraImport": true,
-        "detail": "modules.services.services",
+        "detail": "app.modules.services.services",
         "documentation": {}
     },
     {
         "label": "update_service",
-        "importPath": "modules.services.services",
-        "description": "modules.services.services",
+        "importPath": "app.modules.services.services",
+        "description": "app.modules.services.services",
         "isExtraImport": true,
-        "detail": "modules.services.services",
+        "detail": "app.modules.services.services",
         "documentation": {}
     },
     {
         "label": "UserCreateRequest",
-        "importPath": "modules.users.schemas",
-        "description": "modules.users.schemas",
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
         "isExtraImport": true,
-        "detail": "modules.users.schemas",
+        "detail": "app.modules.users.schemas",
         "documentation": {}
     },
     {
         "label": "UserCreateResponse",
-        "importPath": "modules.users.schemas",
-        "description": "modules.users.schemas",
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
         "isExtraImport": true,
-        "detail": "modules.users.schemas",
+        "detail": "app.modules.users.schemas",
         "documentation": {}
     },
     {
         "label": "UserLogInResponse",
-        "importPath": "modules.users.schemas",
-        "description": "modules.users.schemas",
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
         "isExtraImport": true,
-        "detail": "modules.users.schemas",
+        "detail": "app.modules.users.schemas",
         "documentation": {}
     },
     {
         "label": "create_user",
-        "importPath": "modules.users.services",
-        "description": "modules.users.services",
+        "importPath": "app.modules.users.services",
+        "description": "app.modules.users.services",
         "isExtraImport": true,
-        "detail": "modules.users.services",
+        "detail": "app.modules.users.services",
         "documentation": {}
     },
     {
         "label": "login_user_service",
-        "importPath": "modules.users.services",
-        "description": "modules.users.services",
+        "importPath": "app.modules.users.services",
+        "description": "app.modules.users.services",
         "isExtraImport": true,
-        "detail": "modules.users.services",
+        "detail": "app.modules.users.services",
         "documentation": {}
     },
     {
         "label": "User",
-        "importPath": "modules.users.models",
-        "description": "modules.users.models",
+        "importPath": "app.modules.users.models",
+        "description": "app.modules.users.models",
         "isExtraImport": true,
-        "detail": "modules.users.models",
+        "detail": "app.modules.users.models",
         "documentation": {}
     },
     {
         "label": "model_to_dict",
-        "importPath": "utils.model_to_dict",
-        "description": "utils.model_to_dict",
+        "importPath": "app.utils.model_to_dict",
+        "description": "app.utils.model_to_dict",
         "isExtraImport": true,
-        "detail": "utils.model_to_dict",
+        "detail": "app.utils.model_to_dict",
         "documentation": {}
     },
     {
         "label": "make_html_body",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
         "isExtraImport": true,
-        "detail": "modules.users.utils",
+        "detail": "app.modules.users.utils",
         "documentation": {}
     },
     {
         "label": "service_router",
-        "importPath": "modules.services.routers",
-        "description": "modules.services.routers",
+        "importPath": "app.modules.services.routers",
+        "description": "app.modules.services.routers",
         "isExtraImport": true,
-        "detail": "modules.services.routers",
+        "detail": "app.modules.services.routers",
         "documentation": {}
     },
     {
         "label": "booking_router",
-        "importPath": "modules.bookings.routers",
-        "description": "modules.bookings.routers",
+        "importPath": "app.modules.bookings.routers",
+        "description": "app.modules.bookings.routers",
         "isExtraImport": true,
-        "detail": "modules.bookings.routers",
+        "detail": "app.modules.bookings.routers",
         "documentation": {}
     },
     {
         "label": "user_router",
-        "importPath": "modules.users.routers",
-        "description": "modules.users.routers",
+        "importPath": "app.modules.users.routers",
+        "description": "app.modules.users.routers",
         "isExtraImport": true,
-        "detail": "modules.users.routers",
+        "detail": "app.modules.users.routers",
         "documentation": {}
     },
     {
@@ -1347,26 +1387,26 @@
     },
     {
         "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "importPath": "app.config",
+        "description": "app.config",
         "isExtraImport": true,
-        "detail": "config",
+        "detail": "app.config",
         "documentation": {}
     },
     {
         "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "importPath": "app.config",
+        "description": "app.config",
         "isExtraImport": true,
-        "detail": "config",
+        "detail": "app.config",
         "documentation": {}
     },
     {
         "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "importPath": "app.config",
+        "description": "app.config",
         "isExtraImport": true,
-        "detail": "config",
+        "detail": "app.config",
         "documentation": {}
     },
     {
@@ -1421,6 +1461,23 @@
         "documentation": {}
     },
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "declarative_base",
         "importPath": "sqlalchemy.ext.declarative",
         "description": "sqlalchemy.ext.declarative",
@@ -1438,26 +1495,77 @@
     },
     {
         "label": "router",
-        "importPath": "routes.router",
-        "description": "routes.router",
+        "importPath": "app.routes.router",
+        "description": "app.routes.router",
         "isExtraImport": true,
-        "detail": "routes.router",
+        "detail": "app.routes.router",
         "documentation": {}
     },
     {
         "label": "register_all_errors",
-        "importPath": "exceptions.handler",
-        "description": "exceptions.handler",
+        "importPath": "app.exceptions.handler",
+        "description": "app.exceptions.handler",
         "isExtraImport": true,
-        "detail": "exceptions.handler",
+        "detail": "app.exceptions.handler",
         "documentation": {}
     },
     {
         "label": "authenticate_user",
-        "importPath": "dependencies.authenticate_user",
-        "description": "dependencies.authenticate_user",
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
         "isExtraImport": true,
-        "detail": "dependencies.authenticate_user",
+        "detail": "app.dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "pytest_asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest_asyncio",
+        "description": "pytest_asyncio",
+        "detail": "pytest_asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "ASGITransport",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app.main",
+        "description": "app.main",
+        "isExtraImport": true,
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -1861,7 +1969,7 @@
         "kind": 5,
         "importPath": "app.utils.manage_auth",
         "description": "app.utils.manage_auth",
-        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nfrom exceptions.models import CustomError\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nfrom app.exceptions.models import CustomError\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False",
         "detail": "app.utils.manage_auth",
         "documentation": {}
     },
@@ -1933,7 +2041,7 @@
         "kind": 6,
         "importPath": "app.config",
         "description": "app.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME:str\n    SENDER_PASSWORD:str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_USER: str\n    DB_PASS: str\n    DB_NAME: str\n    SENDER_PASSWORD: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
         "detail": "app.config",
         "documentation": {}
     },
@@ -1987,8 +2095,71 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Hello World\"}\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers",
         "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "DATABASE_URL = \"sqlite+aiosqlite:///:memory:\"\nengine = create_async_engine(DATABASE_URL, future=True, echo=False)\nTestingSessionLocal = sessionmaker(\n    bind=engine, class_=AsyncSession, expire_on_commit=False\n)\n# Override the FastAPI dependency\nasync def override_get_db():\n    async with TestingSessionLocal() as session:\n        yield session\napp.dependency_overrides[get_db] = override_get_db",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "engine = create_async_engine(DATABASE_URL, future=True, echo=False)\nTestingSessionLocal = sessionmaker(\n    bind=engine, class_=AsyncSession, expire_on_commit=False\n)\n# Override the FastAPI dependency\nasync def override_get_db():\n    async with TestingSessionLocal() as session:\n        yield session\napp.dependency_overrides[get_db] = override_get_db\n# Create and drop tables for the test DB",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "TestingSessionLocal",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "TestingSessionLocal = sessionmaker(\n    bind=engine, class_=AsyncSession, expire_on_commit=False\n)\n# Override the FastAPI dependency\nasync def override_get_db():\n    async with TestingSessionLocal() as session:\n        yield session\napp.dependency_overrides[get_db] = override_get_db\n# Create and drop tables for the test DB\n@pytest_asyncio.fixture(scope=\"session\", autouse=True)",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_db]",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "app.dependency_overrides[get_db] = override_get_db\n# Create and drop tables for the test DB\n@pytest_asyncio.fixture(scope=\"session\", autouse=True)\nasync def prepare_test_db():\n    async with engine.begin() as conn:\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    async with engine.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n# Provide the async client to the test functions",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "auth_token",
+        "kind": 5,
+        "importPath": "tests.test_app",
+        "description": "tests.test_app",
+        "peekOfCode": "auth_token = None\nservice_id = None\nbooking_id = None\n@pytest.mark.asyncio\nasync def test_1_register_user(client):\n    global auth_token\n    payload = {\n        \"name\": \"Test User\",\n        \"email\": \"testuser@example.com\",\n        \"password\": \"password123\"",
+        "detail": "tests.test_app",
+        "documentation": {}
+    },
+    {
+        "label": "service_id",
+        "kind": 5,
+        "importPath": "tests.test_app",
+        "description": "tests.test_app",
+        "peekOfCode": "service_id = None\nbooking_id = None\n@pytest.mark.asyncio\nasync def test_1_register_user(client):\n    global auth_token\n    payload = {\n        \"name\": \"Test User\",\n        \"email\": \"testuser@example.com\",\n        \"password\": \"password123\"\n    }",
+        "detail": "tests.test_app",
+        "documentation": {}
+    },
+    {
+        "label": "booking_id",
+        "kind": 5,
+        "importPath": "tests.test_app",
+        "description": "tests.test_app",
+        "peekOfCode": "booking_id = None\n@pytest.mark.asyncio\nasync def test_1_register_user(client):\n    global auth_token\n    payload = {\n        \"name\": \"Test User\",\n        \"email\": \"testuser@example.com\",\n        \"password\": \"password123\"\n    }\n    resp = await client.post(\"/api/v1/users/register-user\", json=payload)",
+        "detail": "tests.test_app",
         "documentation": {}
     }
 ]

@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from enum import Enum
 from datetime import datetime
-from modules.services.schemas import ServiceReferenceResponseForBookingService
+from app.modules.services.schemas import ServiceReferenceResponseForBookingService
 
 class StatusTypeEnum(str, Enum):
     pending = "pending" #Booking request has been made but not yet confirmed.

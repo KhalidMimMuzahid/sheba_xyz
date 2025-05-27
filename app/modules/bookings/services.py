@@ -1,15 +1,15 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
-from exceptions.models import CustomError
-from modules.services.models import Service
-from modules.bookings.models import Booking
-from modules.services.schemas import ServiceReferenceResponseForBookingService
-from utils.query_builder import query_builder
-from modules.bookings.utils import transform_service_data
-from utils.send_mail import send_email, EmailSchema
-from modules.bookings.utils import make_html_body, make_html_body_for_changing_status
-from modules.bookings.schemas import StatusTypeEnum
+from app.exceptions.models import CustomError
+from app.modules.services.models import Service
+from app.modules.bookings.models import Booking
+from app.modules.services.schemas import ServiceReferenceResponseForBookingService
+from app.utils.query_builder import query_builder
+from app.modules.bookings.utils import transform_service_data
+from app.utils.send_mail import send_email, EmailSchema
+from app.modules.bookings.utils import make_html_body, make_html_body_for_changing_status
+from app.modules.bookings.schemas import StatusTypeEnum
 
 async def booking_service(db: AsyncSession, customer_name: str, customer_phone:str, customer_email:str, service_id = int):
      # checking for existence service with the provided service_id

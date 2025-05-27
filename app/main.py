@@ -1,11 +1,15 @@
 from fastapi import FastAPI , Depends
 from fastapi.middleware.cors import CORSMiddleware
-from routes.router import router
-from database import init_db
-from exceptions.handler import register_all_errors
-from dependencies.authenticate_user import authenticate_user
+from app.routes.router import router
+from app.database import init_db
+from app.exceptions.handler import register_all_errors
+from app.dependencies.authenticate_user import authenticate_user
 
 app = FastAPI()
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://localhost:3000"],  # Replace with your frontend URL

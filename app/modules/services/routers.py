@@ -1,11 +1,11 @@
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-from database import get_db 
-from modules.services.services import create_service, get_services, delete_service, update_service
-from responses.models import Response
-from responses.handler import create_response
-from modules.services.schemas import ServiceCreateRequest, ServiceCreateResponse, ServiceListResponse, ServiceUpdateRequest
+from app.database import get_db 
+from app.modules.services.services import create_service, get_services, delete_service, update_service
+from app.responses.models import Response
+from app.responses.handler import create_response
+from app.modules.services.schemas import ServiceCreateRequest, ServiceCreateResponse, ServiceListResponse, ServiceUpdateRequest
 
 
 

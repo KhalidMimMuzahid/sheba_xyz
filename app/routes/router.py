@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from modules.services.routers import service_router
-from modules.bookings.routers import booking_router
-from modules.users.routers import user_router
+from app.modules.services.routers import service_router
+from app.modules.bookings.routers import booking_router
+from app.modules.users.routers import user_router
 
 
 # creating a router 

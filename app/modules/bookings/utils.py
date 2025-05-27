@@ -1,4 +1,4 @@
-from modules.services.schemas import ServiceReferenceResponseForBookingService
+from app.modules.services.schemas import ServiceReferenceResponseForBookingService
 
 def transform_service_data(booking):
     """Transforms a Booking ORM object into a dictionary format with nested schema."""

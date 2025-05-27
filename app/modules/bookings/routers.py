@@ -1,11 +1,11 @@
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-from database import get_db 
-from responses.models import Response
-from responses.handler import create_response
-from modules.bookings.services import booking_service, get_bookings, check_booking_status_service, update_booking_status
-from modules.bookings.schemas import BookingCreateRequest, BookingCreateResponse, BookingListResponse, checkBookingStatusResponse, UpdateBookingStatusResponse, StatusTypeEnum
+from app.database import get_db 
+from app.responses.models import Response
+from app.responses.handler import create_response
+from app.modules.bookings.services import booking_service, get_bookings, check_booking_status_service, update_booking_status
+from app.modules.bookings.schemas import BookingCreateRequest, BookingCreateResponse, BookingListResponse, checkBookingStatusResponse, UpdateBookingStatusResponse, StatusTypeEnum
 
 
 booking_router = APIRouter()

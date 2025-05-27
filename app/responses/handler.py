@@ -2,9 +2,9 @@
 from typing import Type, Union, List, Optional
 from sqlalchemy.orm import declarative_base, DeclarativeMeta
 from pydantic import ValidationError
-from responses.models import Response, MetaData
-from database import Base
-from exceptions.models import CustomError
+from app.responses.models import Response, MetaData
+from app.database import Base
+from app.exceptions.models import CustomError
 
 
 def create_response(message: str,

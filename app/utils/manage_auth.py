@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 from passlib.context import CryptContext
-from config import Config
+from app.config import Config
 import jwt
 passwd_context = CryptContext(schemes=["bcrypt"])
-from exceptions.models import CustomError
+from app.exceptions.models import CustomError
 
 ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second
 

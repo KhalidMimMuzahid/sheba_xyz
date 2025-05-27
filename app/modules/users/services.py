@@ -1,13 +1,13 @@
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from modules.users.models import User
-from exceptions.models import CustomError
-from exceptions.models import CustomError
-from utils.manage_auth import generate_passwd_hash, verify_password, create_access_token
-from utils.send_mail import send_email, EmailSchema
-from utils.model_to_dict import model_to_dict
-from modules.users.utils import make_html_body
+from app.modules.users.models import User
+from app.exceptions.models import CustomError
+from app.exceptions.models import CustomError
+from app.utils.manage_auth import generate_passwd_hash, verify_password, create_access_token
+from app.utils.send_mail import send_email, EmailSchema
+from app.utils.model_to_dict import model_to_dict
+from app.modules.users.utils import make_html_body
 
 
 

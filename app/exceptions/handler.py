@@ -2,7 +2,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import ResponseValidationError
 from fastapi import FastAPI, Request, status
 from sqlalchemy.exc import SQLAlchemyError
-from exceptions.models import CustomError, ExceptionContent
+from app.exceptions.models import CustomError, ExceptionContent
 import re
 def register_all_errors(app: FastAPI):
     # Handling CustomError 

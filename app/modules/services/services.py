@@ -1,9 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from modules.services.models import Service
-from utils.query_builder import query_builder
+from app.modules.services.models import Service
+from app.utils.query_builder import query_builder
 from sqlalchemy.future import select
-from exceptions.models import CustomError
-from modules.bookings.models import Booking
+from app.exceptions.models import CustomError
+from app.modules.bookings.models import Booking
 
 async def create_service(db: AsyncSession, name: str, category:str, description:str, price:int ):
      #  making an instance of the Service object that inherits from Service Class (Models class)

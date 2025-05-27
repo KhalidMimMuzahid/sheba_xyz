@@ -2,7 +2,7 @@ import aiosmtplib
 from email.message import EmailMessage
 from typing import Optional
 from pydantic import BaseModel
-from config import Config
+from app.config import Config
 
 # Email Configuration
 SMTP_HOST = "smtp.gmail.com"

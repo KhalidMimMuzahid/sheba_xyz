@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import DeclarativeMeta, joinedload
 from sqlalchemy import desc, asc, func
-from responses.models import MetaData
+from app.responses.models import MetaData
 from typing import Dict, Optional, Any, List
 import math
 

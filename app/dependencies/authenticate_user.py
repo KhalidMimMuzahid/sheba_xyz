@@ -1,8 +1,8 @@
 from fastapi import Request, Security
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
-from utils.manage_auth import decode_access_token
-from exceptions.models import CustomError
+from app.utils.manage_auth import decode_access_token
+from app.exceptions.models import CustomError
 from urllib.parse import urlparse
 
 # Define security scheme
