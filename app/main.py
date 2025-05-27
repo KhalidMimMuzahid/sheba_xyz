@@ -6,9 +6,6 @@ from app.exceptions.handler import register_all_errors
 from app.dependencies.authenticate_user import authenticate_user
 
 app = FastAPI()
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
 
 app.add_middleware(
     CORSMiddleware,

@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASS: str
     DB_NAME: str
+    DB_PORT:str
     SENDER_PASSWORD: str
     JWT_SECRET: str
     JWT_ALGORITHM: str
